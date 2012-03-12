@@ -3,9 +3,7 @@
 <head>
 {% block head %}
 {{ super() }}
-{% block title %}<meta name="title" content="Sean Bradley&mdash;New Post" />{% endblock %}
-<script src="https://s3.amazonaws.com/blogblimp/scripts/ckeditor.js"></script>
-<script src="https://s3.amazonaws.com/blogblimp/scripts/jquery.js"></script>
+{% block title %}<title>Sean Bradley&mdash;New Post</title>{% endblock %}
 <script>
     $(document).ready(function(){ // (s)document.ready
         $("textarea[name='editor']").ckeditor(function(){},{height:700});
