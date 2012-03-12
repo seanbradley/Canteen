@@ -41,13 +41,13 @@ Once you have determined your development environment...
 
 2) Inside of the Canteen directory, you'll find the *src/app.yaml* file.  Edit the application name and version in the *app.yaml* file.  Presently, it's set as application: seanbradley-2 and version: 3  ...but you need to change name in the text editor of your choice so that it is the same as the name you selected inside of GAE's web-based admnistrative dashboard.  Change the version number to 1.
 
-5) Open up GAE's Launcher, click [File] --> [Add Existing Application] --> find the "Canteen\src" directory on your harddrive --> then, in the Launcher, click [Start].  Make any desired changes, test them out in your browser, and then, inside the Launcher, clik [Deploy].
+5) Open up GAE's Launcher, click [File] --> [Add Existing Application] --> find the "Canteen/src" directory on your harddrive --> then, in the Launcher, click [Start].  Make any desired changes, test them out in your browser, and then, inside the Launcher, clik [Deploy].
 
 
 You'll be in the trenches and behind the wire before you know it. :)
 
 
-NOTE: You may also have to adjust URLs in the *src\templates\admin_dashboards_layout.html* template.
+NOTE: You may also have to adjust URLs in the *src/templates/admin_dashboards_layout.html* template.
 
 ************************************
 
@@ -205,7 +205,7 @@ http://compass-style.org/
 Canteen on Google App Engine is based in part on Francisco Souza's installation of Flask at:
 http://f.souza.cc/2010/08/flying-with-flask-on-google-app-engine/
 
-Canteen borrows heavily from the work of Kamal Gill and his Flask / GAE template, which uses HTML5Boilerplate instead of Bootstrap:
+Canteen borrows heavily from the work of Kamal Gill and his Flask + GAE template, which uses HTML5Boilerplate instead of Bootstrap:
 https://github.com/kamalgill/flask-appengine-template
 
 *NB: I am not an unbridled fan of GAE, but it's especially handy if your free tier at AWS has been exhausted. ;)
