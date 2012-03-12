@@ -52,7 +52,7 @@ NOTE: You may also have to adjust URLs in the *src\templates\admin_dashboards_la
 ************************************
 
 TO RUN THE APP FROM THE COMMAND LINE
-===+++==============================
+====================================
 
 These are instructions for Flask veterans who don't want to use Google App Engine, and who know what they're doing when it comes to deployment on a foreign server.  You will have to change the *src/application/_init_.py* file as well as other files listed in the comments of the *src/main.py* file.
 
@@ -68,7 +68,7 @@ When in development mode, line 3 of the runserver.py file should be set to debug
 ************************************
 
 A MANIFEST OF IMPORTANT FILES
-========+++++================
+=============================
 
 This is not a MANIFEST.in file.  It's just a list of files you should know about and where they're located in the directory tree.
 
