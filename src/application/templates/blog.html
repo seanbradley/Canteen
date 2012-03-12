@@ -1,0 +1,54 @@
+{% extends "blog_layout.html" %}
+
+<head>
+{% block head %}
+{{ super() }}
+{% block title %}<title>Sean Bradley&mdash;Blog</title>{% endblock %}
+{% endblock %}
+</head>
+
+<body>
+
+
+	<div>
+		{% block content %}
+        {{ super() }}
+		<ul>
+    		{% for post in blog %}
+    		<li class="span9">
+				<h2>{{ post.title }}</h2>
+            	<h4>written by {{ post.author.nickname() }}</h4>
+				<br />
+        		<div style="font-size:14px">{{ post.prose }}</div>
+				<div style="padding:10px"></div>
+				<hr />
+				<div style="padding:15px"></div>
+    		</li>
+    		{% endfor %}
+		</ul>
+		{% endblock %}
+	</div>
+
+	{% block sidebarnav %}
+	{{ super() }}
+	         <ul class="nav nav-list">
+              <li class="nav-header">WEBSITES</li>
+              <li><a href="http://bravoflix.com">Bravoflix</a>&mdash;Social TV for Cultural Connoisseurs</li>
+              <li><a href="http://blogblimp.com">BlogBlimp</a>&mdash;Technology Consultancy for Artists</li>
+              <li><a href="http://cityopera.net">CityOpera</a>&mdash;Creative Project / Talent Management</li>
+              <li class="nav-header">ADDITIONAL LINKS</li>
+              <li><a href="http://en.wikipedia.org/wiki/Sean_Bradley">Wikipedia</a></li>
+              <li><a href="http://www.linkedin.com/in/seanbradley1">LinkedIn</a></li>
+              <li><a href="http://www.facebook.com/cityopera">Facebook</a></li>
+              <li><a href="http://www.twitter.com/#/bravoflix">Twitter</a></li>
+              <li><a href="http://www.quora.com/Sean-Bradley">Quora</a></li>
+              <li><a href="https://github.com/bravoflix">Github</a></li>
+              <li><a href="http://blog.bravoflix.com/">BravoBlog</a></li>
+            </ul>
+	{% endblock %}
+
+    <div class="clear_both"></div>
+
+	{% block footer %}
+	{{ super() }}
+	{% endblock %}

@@ -1,0 +1,31 @@
+application: seanbradley-2
+version: 3
+runtime: python
+api_version: 1
+
+
+default_expiration: "14d"
+
+builtins:
+- appstats: on
+- datastore_admin: on
+- deferred: on
+- remote_api: on
+
+inbound_services:
+- warmup
+
+handlers:
+- url: /favicon.ico
+  static_files: application/static/img/favicon.ico
+  upload: application/static/img/favicon.ico
+
+- url: /robots.txt
+  static_files: application/static/robots.txt
+  upload: application/static/robots.txt
+
+- url: /static
+  static_dir: application/static
+
+- url: .*
+  script: main.py

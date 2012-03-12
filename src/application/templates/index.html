@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+<head>
+{% block head %}
+{{ super() }}
+{% block title %}<title>Sean Bradley&mdash;Home</title>{% endblock %}
+{% endblock %}
+</head>
+
+<body>
+
+
+    {% block topnavbar %}
+	{{ super() }}
+
+	{% endblock %}
+
+
+	{% block header %}
+	{{ super() }}
+          <div class="hero-unit">
+			<img src="/static/img/sean_white_shirt_original.png" />
+            <p>Concert producer and conductor.  Creative consultant and impresario for live and online events.  On stage, I connect ideas and talent; backstage, I manage technology and magic.  I am first and foremost an artist, but part of my life was spent as a warrior.  In me, there is no division between imagination and common sense.  The diversity of my skills reflect that outlook.  With more than 25 years of making amazing things happen on stage, and having enjoyed the mentorship of some of recent history's most acclaimed virtuosi and maestros, I have little interest in administraton for its own sake.  However, if you're looking for innovation&mdash;indeed, a <em>revolution</em>&mdash;you've come to the right place.  Regardless of the tool I use&mdash;whether it's Bach and Beethoven, or bits and bytes&mdash;I serve audiences and artists.  My work is intended for people, and the powerful subtlties of what it means to be human and alive.  As such, my job, among any team or tribe, is to evoke the most exciting and transcendental experience possible, and to do so with elegance and efficiency.</p>
+            <p><a class="btn btn-primary btn-large" href="http://en.wikipedia.org/wiki/Sean_Bradley">Learn More&raquo;</a></p>
+          </div>
+	{% endblock %}
+
+	{% block article_one %}
+	{{ super() }}
+            <div class="span4">
+              <h2>Conducting</h2>
+              <p>Video: Director of City Opera (Los Angeles).</p>
+              <p><a class="btn" href="http://www.youtube.com/watch?v=158zv96Nj8s">Watch Video &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Performing</h2>
+              <p>Video: Concertmaster and Soloist.</p>
+              <p><a class="btn" href="http://www.youtube.com/watch?v=8K-wO8PTiq0">Watch Video &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Speaking</h2>
+              <p>Video: Stragegic Consultant and Educator. </p>
+              <p><a class="btn" href="http://www.blogblimp.com/anydevice/anywhere/videos.html">Watch Video &raquo;</a></p>
+            </div><!--/span-->
+	{% endblock %}
+
+	{% block article_two %}
+	{{ super() }}
+            <div class="span4">
+              <h2>Twitter</h2>
+              <p>Track my present activities. </p>
+              <p><a class="btn" href="http://www.twitter.com/#/bravoflix">Follow &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Facebook</h2>
+              <p>Connect with my network. </p>
+              <p><a class="btn" href="http://www.facebook.com/cityopera">Friend &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Quora</h2>
+              <p>Ask me anything. </p>
+              <p><a class="btn" href="http://www.quora.com/Sean-Bradley">Inquire &raquo;</a></p>
+            </div><!--/span-->
+	{% endblock %}
+
+
+	{% block sidebarnav %}
+	{{ super() }}
+	         <ul class="nav nav-list">
+              <li class="nav-header">WEBSITES</li>
+              <li><a href="http://bravoflix.com">Bravoflix</a>&mdash;Social TV for Cultural Connoisseurs</li>
+              <li><a href="http://blogblimp.com">BlogBlimp</a>&mdash;Technology Consultancy for Artists</li>
+              <li><a href="http://cityopera.net">CityOpera</a>&mdash;Creative Project / Talent Management</li>
+              <li class="nav-header">ADDITIONAL LINKS</li>
+              <li><a href="http://en.wikipedia.org/wiki/Sean_Bradley">Wikipedia</a></li>
+              <li><a href="http://www.linkedin.com/in/seanbradley1">LinkedIn</a></li>
+              <li><a href="http://www.facebook.com/cityopera">Facebook</a></li>
+              <li><a href="http://www.twitter.com/#/bravoflix">Twitter</a></li>
+              <li><a href="http://www.quora.com/Sean-Bradley">Quora</a></li>
+              <li><a href="https://github.com/bravoflix">Github</a></li>
+              <li><a href="http://blog.bravoflix.com/">BravoBlog</a></li>
+            </ul>
+	{% endblock %}
+
+
+    <div class="clear_both"></div>
+
+	{% block footer %}
+	{{ super() }}
+	{% endblock %}

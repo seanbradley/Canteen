@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    {% block title %}{% endblock %}
+    <meta name="dc.language" content="en" />
+    <meta name="geo.country" content="US" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" >
+    <meta name="description" content="Sean Bradley: Impresario and Entrepreneur." />
+    <meta name="robots" content="index, follow" />
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<!--
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+            $('.collapse').collapse()
+        });
+    </script>
+-->
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/static/compass_project/stylesheets/screen.css"  media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="/static/compass_project/stylesheets/responsive.css" rel="stylesheet" />
+    <link href="/static/compass_project/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE]>
+    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+
+    <!-- fav and touch icons -->
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.png">
+    {% endblock %}
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+
+    {% block topnavbar %}
+    <nav>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+          <a class="brand" href="/">Sean Bradley</a>
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="http://seanbradley-2.appspot.com">Home</a></li>
+              <li><a href="http://seanbradley-2.appspot.com/blog">Blog</a></li>
+              <li><a href="http://seanbradley-2.appspot.com/contact">Contact</a></li>
+            </ul>
+            <ul class="nav" style="float:right">
+              <li><a href="http://seanbradley-1.appspot.com/admin_only">Admin</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+
+          <div class="nav">
+             <ul class="btn-toolbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <li class="btn-navbar btn-inverse"><a href="http://seanbradley-2.appspot.com/admin_only">Admin</a></li>
+                  <li class="btn-navbar btn-inverse"><a href="http://seanbradley-2.appspot.com/contact">Contact</a></li>
+                  <li class="btn-navbar btn-inverse"><a href="http://seanbradley-2.appspot.com/blog">Blog</a></li>
+                  <li class="btn-navbar btn-inverse"><a href="http://seanbradley-2.appspot.com">Home</a></li>
+              </ul>
+          </div>
+
+        </div><!--/.container fluid -->
+      </div><!--/.navbar-inner -->
+    </div><!--/.navbar navbar-fixed-top -->
+
+	</nav>
+    {% endblock %}
+
+	  <div class="row-fluid">
+
+        <div id="content" class="span9">
+
+        <header>
+          {% block header %}
+          {% endblock %}
+        </header>
+
+        <div style="padding:20px"></div>
+
+        <article>
+          <div class="row-fluid">
+            {% block article_one %}
+            {% endblock %}
+          </div><!--/article_one-->
+        </article>
+
+        <div style="padding:20px"><hr></div>
+
+        <article>
+          <div class="row-fluid">
+            {% block article_two %}
+            {% endblock %}
+          </div><!--/article_two-->
+        </article>
+
+        <div style="padding:20px"></div>
+
+        </div><!--/div class span 9-->
+
+
+        <nav>
+          <div id="sidebar" class="span3">
+            <div class="well sidebar-nav">
+              <div style="text-align: center">
+                <img src="/static/img/crest.jpg" />
+              </div>
+              <div style="padding:10px"></div>
+              {% block sidebarnav %}
+              {% endblock %}
+            </div><!--/.well sidebar-nav -->
+          </div><!--/span3-->
+        </nav>
+
+
+      </div><!--/div class row fluid-->
+
+    <footer>
+      <div id="footer">
+          {% block footer %}
+            <p><small>&copy; 2012 by Sean Bradley. <wbr>All rights reserved. Made with love in California on our family farm from free-range <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fblogblimp.com%2F">validated HTML5</a> and other fair-trade, organic ingredients.</small></p><br />
+          {% endblock %}
+      </div>
+    </footer>
+
+    </div><!--/div class container fluid-->
+
+    <!--Clicky-->
+    <script src="//static.getclicky.com/js"></script>
+    <script>try{ clicky.init(66520566); }catch(e){}</script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/66520566ns.gif" /></p></noscript>
+
+  </body>
+
+</html>

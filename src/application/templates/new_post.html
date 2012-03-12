@@ -1,0 +1,115 @@
+{% extends "admin_dashboards_layout.html" %}
+
+<head>
+{% block head %}
+{{ super() }}
+{% block title %}<title>Sean Bradley&mdash;New Post</title>{% endblock %}
+<script src="https://s3.amazonaws.com/blogblimp/scripts/ckeditor.js"></script>
+<script src="https://s3.amazonaws.com/blogblimp/scripts/jquery.js"></script>
+<script>
+    $(document).ready(function(){ // (s)document.ready
+        $("textarea[name='editor']").ckeditor(function(){},{height:700});
+    }); // (e)document.ready
+</script>
+{% endblock %}
+</head>
+
+<body>
+
+    {% block topnavbar %}
+	{{ super() }}
+
+	{% endblock %}
+
+
+	{% block article_one %}
+    <h1 id="">Write a blog post...</h1>
+    <form action="{{ url_for('new_post') }}" method="post" accept-charset="utf-8">
+        {{ form.csrf_token }}
+
+        <p>
+
+            <br />
+            <br />
+
+            <label for="title">{{ form.title.label }}</label>
+
+            {{ form.title|safe }}
+
+            {% if form.title.errors %}
+            <ul class="errors">
+                {% for error in form.title.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <br />
+            <br />
+
+
+            <label for="prose">{{ form.prose.label }}</label>
+
+            {{ form.prose|safe }}
+
+
+
+            {% if form.prose.errors %}
+            <ul class="errors">
+                {% for error in form.prose.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </p>
+
+        <p><input type="submit" value="Save post"/></p>
+    </form>
+	{% endblock %}
+
+	{% block article_two %}
+	{{ super() }}
+            <div class="span4">
+              <h2>Twitter</h2>
+              <p>Tweet about blog. </p>
+              <p><a class="btn" href="http://www.twitter.com/#/bravoflix">Go &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Facebook</h2>
+              <p>Update status about blog. </p>
+              <p><a class="btn" href="http://www.facebook.com/cityopera">Go &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Quora</h2>
+              <p>Answer questions; refer to blog. </p>
+              <p><a class="btn" href="http://www.quora.com/Sean-Bradley">Go &raquo;</a></p>
+            </div><!--/span-->
+	{% endblock %}
+
+
+	{% block sidebarnav %}
+	{{ super() }}
+	         <ul class="nav nav-list">
+              <li class="nav-header">WEBSITES</li>
+              <li><a href="http://bravoflix.com">Bravoflix</a>&mdash;Social TV for Cultural Connoisseurs</li>
+              <li><a href="http://blogblimp.com">BlogBlimp</a>&mdash;Technology Consultancy for Artists</li>
+              <li><a href="http://cityopera.net">CityOpera</a>&mdash;Creative Project / Talent Management</li>
+              <li class="nav-header">ADDITIONAL LINKS</li>
+              <li><a href="http://en.wikipedia.org/wiki/Sean_Bradley">Wikipedia</a></li>
+              <li><a href="http://www.linkedin.com/in/seanbradley1">LinkedIn</a></li>
+              <li><a href="http://www.facebook.com/cityopera">Facebook</a></li>
+              <li><a href="http://www.twitter.com/#/bravoflix">Twitter</a></li>
+              <li><a href="http://www.quora.com/Sean-Bradley">Quora</a></li>
+              <li><a href="https://github.com/bravoflix">Github</a></li>
+              <li><a href="http://blog.bravoflix.com/">Blogger</a></li>
+            </ul>
+	{% endblock %}
+
+
+    <div class="clear_both"></div>
+
+	{% block footer %}
+	{{ super() }}
+	{% endblock %}

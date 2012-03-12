@@ -1,0 +1,72 @@
+{% extends "admin_dashboards_layout.html" %}
+
+<head>
+{% block head %}
+{{ super() }}
+{% block title %}<title>Sean Bradley&mdash;Admin</title>{% endblock %}
+{% endblock %}
+</head>
+
+<body>
+
+
+    {% block topnavbar %}
+    {{ super() }}
+
+    {% endblock %}
+
+
+	{% block header %}
+	{{ super() }}
+<!--			{% if name %}
+			<p class="navbar-text pull-right">Logged in as <a href="#">{{ name }}</a></p>
+			{% else %}
+			<p>Welcome to the Admin page!</p>
+			{% endif %}-->
+	{% endblock %}
+
+	{% block article_one %}
+	{{ super() }}
+            <div class="span4">
+              <h2>New Blog Post</h2>
+              <p>Click here to update this site's blog.</p>
+              <p><a class="btn" href="/blog/new">Post &raquo;</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Other Admin</h2>
+              <p>Reserved for other admin function.</p>
+              <p><a class="btn" href="http://google.com">Go!</a></p>
+            </div><!--/span-->
+
+            <div class="span4">
+              <h2>Other Admin</h2>
+              <p>Reserved for other admin function. </p>
+              <p><a class="btn" href="http://google.com">Go!</a></p>
+            </div><!--/span-->
+	{% endblock %}
+
+	{% block sidebarnav %}
+	{{ super() }}
+	         <ul class="nav nav-list">
+              <li class="nav-header">WEBSITES</li>
+              <li><a href="http://bravoflix.com">Bravoflix</a>&mdash;Social TV for Cultural Connoisseurs</li>
+              <li><a href="http://blogblimp.com">BlogBlimp</a>&mdash;Technology Consultancy for Artists</li>
+              <li><a href="http://cityopera.net">CityOpera</a>&mdash;Creative Project / Talent Management</li>
+              <li class="nav-header">ADDITIONAL LINKS</li>
+              <li><a href="http://en.wikipedia.org/wiki/Sean_Bradley">Wikipedia</a></li>
+              <li><a href="http://www.linkedin.com/in/seanbradley1">LinkedIn</a></li>
+              <li><a href="http://www.facebook.com/cityopera">Facebook</a></li>
+              <li><a href="http://www.twitter.com/#/bravoflix">Twitter</a></li>
+              <li><a href="http://www.quora.com/Sean-Bradley">Quora</a></li>
+              <li><a href="https://github.com/bravoflix">Github</a></li>
+              <li><a href="http://blog.bravoflix.com/">BravoBlog</a></li>
+            </ul>
+	{% endblock %}
+
+
+    <div class="clear_both"></div>
+
+	{% block footer %}
+	{{ super() }}
+	{% endblock %}

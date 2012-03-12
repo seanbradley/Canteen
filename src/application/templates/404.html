@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+<head>
+{% block title %}404 Error{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+</head>
+
+<body>
+
+
+    {% block topnavbar %}
+	{{ super() }}
+
+	{% endblock %}
+
+    <div class="container-fluid">
+
+    <nav>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+          <a class="brand" href="/">Sean Bradley</a>
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="blog">Blog</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+            <ul class="nav" style="float:right">
+              <li><a href="admin_only">Login</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+
+          <div class="nav">
+             <ul class="btn-toolbar" data-toggle="collapse" data-target=".nav-collapse">
+                  <li class="btn-navbar btn-inverse"><a href="admin_only">Login</a></li>
+                  <li class="btn-navbar btn-inverse"><a href="contact">Contact</a></li>
+                  <li class="btn-navbar btn-inverse"><a href="blog">Blog</a></li>
+                  <li class="btn-navbar btn-inverse"><a href="/">Home</a></li>
+              </ul>
+          </div>
+
+        </div><!--/.container fluid -->
+      </div><!--/.navbar-inner -->
+    </div><!--/.navbar navbar-fixed-top -->
+
+    {% block article_one %}
+	{{ super() }}
+    <div class="hero-unit">
+        <h3>This is not the page you are looking for...</h3>
+        <br />
+        <h3>Unless what you are seeking is an error message, what you are looking for may not even exist.</h3>
+        <br />
+        <details>
+            <div style="text-align: center">
+                <img src="/static/img/kid_n_camel.jpg" width="300" />
+            </div>
+            <h3>You're way off the beaten path, pilgrim!  We love explorers, really we do.  But whoa!  You are now somewhere in the vast uncharted regions of a 404 Error.  Whatever you're trying to find, it's not here!  We recommend clicking one of the above links, or try clicking your browser's [back] arrow button.
+</h3></summary>
+        </details>
+     </div>
+	{% endblock %}
+
+	{% block sidebarnav %}
+	{{ super() }}
+	         <ul class="nav nav-list">
+              <li class="nav-header">WEBSITES</li>
+              <li><a href="http://bravoflix.com">Bravoflix</a>&mdash;Social TV for Cultural Connoisseurs</li>
+              <li><a href="http://blogblimp.com">BlogBlimp</a>&mdash;Technology Consultancy for Artists</li>
+              <li><a href="http://cityopera.net">CityOpera</a>&mdash;Creative Project / Talent Management</li>
+              <li class="nav-header">ADDITIONAL LINKS</li>
+              <li><a href="http://en.wikipedia.org/wiki/Sean_Bradley">Wikipedia</a></li>
+              <li><a href="http://www.linkedin.com/in/seanbradley1">LinkedIn</a></li>
+              <li><a href="http://www.facebook.com/cityopera">Facebook</a></li>
+              <li><a href="http://www.twitter.com/#/bravoflix">Twitter</a></li>
+              <li><a href="http://www.quora.com/Sean-Bradley">Quora</a></li>
+              <li><a href="https://github.com/bravoflix">Github</a></li>
+              <li><a href="http://blog.bravoflix.com/">BravoBlog</a></li>
+            </ul>
+	{% endblock %}
+
+    <footer>
+      <div id="footer">
+          {% block footer %}
+            <p><small>&copy; 2012 by Sean Bradley. <wbr>All rights reserved. Made with love in California on our family farm from free-range <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fblogblimp.com%2F">validated HTML5</a> and other fair-trade, organic ingredients.</small></p><br />
+          {% endblock %}
+      </div>
+    </footer>

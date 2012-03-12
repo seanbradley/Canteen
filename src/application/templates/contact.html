@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+<head>
+{% block head %}
+{{ super() }}
+{% block title %}<title>Sean Bradley&mdash;Contact</title>{% endblock %}
+{% endblock %}
+</head>
+
+<body>
+
+	{% block header %}
+	{{ super() }}
+          <div class="hero-unit">
+			<h2>Sean Bradley</h2>
+			<p>8605 Santa Monica Boulevard, Suite 25450</p>
+			<p>Los Angeles, California</p>
+			<p>90069</p>
+			<br />
+			<h3>Phone</h3>
+			<p>(213) 925-8598</p>
+			<br />
+			<h3>Fax</h3>
+			<p>(213) 226-4646</p>
+			<br />
+			<h3>E-mail</h3>
+			<p>sean@cityopera.net | sean@bravoflix.com</p>
+          </div>
+	{% endblock %}
+
+	{% block sidebarnav %}
+	{{ super() }}
+	         <ul class="nav nav-list">
+              <li class="nav-header">WEBSITES</li>
+              <li><a href="http://bravoflix.com">Bravoflix</a>&mdash;Social TV for Cultural Connoisseurs</li>
+              <li><a href="http://blogblimp.com">BlogBlimp</a>&mdash;Technology Consultancy for Artists</li>
+              <li><a href="http://cityopera.net">CityOpera</a>&mdash;Creative Project / Talent Management</li>
+              <li class="nav-header">ADDITIONAL LINKS</li>
+              <li><a href="http://en.wikipedia.org/wiki/Sean_Bradley">Wikipedia</a></li>
+              <li><a href="http://www.linkedin.com/in/seanbradley1">LinkedIn</a></li>
+              <li><a href="http://www.facebook.com/cityopera">Facebook</a></li>
+              <li><a href="http://www.twitter.com/#/bravoflix">Twitter</a></li>
+              <li><a href="http://www.quora.com/Sean-Bradley">Quora</a></li>
+              <li><a href="https://github.com/bravoflix">Github</a></li>
+              <li><a href="http://blog.bravoflix.com/">BravoBlog</a></li>
+            </ul>
+	{% endblock %}
+
+    <div class="clear_both"></div>
+
+	{% block footer %}
+	{{ super() }}
+	{% endblock %}
