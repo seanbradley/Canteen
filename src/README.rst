@@ -2,9 +2,9 @@
 CANTEEN: Flask outfitted for mobile combat
 ==========================================
 
-Flask + Compass + Bootstrap.  I call the result Canteen.  :)
+**Flask + Compass + Bootstrap.  I call the result Canteen.  :)**
 
-Canteen is a built on Flask--a Python-based "microframework"--coupled with .scss files compiled with Compass.  (While the Flask-Compass extension is integrated into this Python app for development use, Compass itself is a Ruby-based stylesheet authoring environment for Sass.)
+Canteen is a built on **Flask**--a Python-based "microframework"--coupled with .scss files compiled with Compass.  (While the Flask-Compass extension is integrated into this Python app for development use, Compass itself is stylesheet authoring environment for Sass that relies on Ruby.)
 
 In addition, the front-end of Canteen is inspired by Bootstrap, a wonderfully responsive HTML5 framework suitable for mobile web apps.  To see what that styling looks like, visit www.seanbradley.biz.  There you'll see the app served up from Google App Engine (GAE). Resizing your browser will give you a taste for how the app might display on any number of mobile devices.
 
@@ -22,7 +22,7 @@ These instructions assume you already have a Google App Engine account (also kno
 	http://appengine.google.com
 
 
-NOTE: GAE will ask you to give your application a name.  That name will be synonymous with the application name inside Canteen's app.yaml file.  The name you choose for your version of Canteen must not be synonymous with another application already reserved on Google App Engine. 
+NOTE: GAE will ask you to give your application a name.  That name will be synonymous with the application name inside Canteen's *app.yaml* file.  The name you choose for your version of Canteen must not be synonymous with another application already reserved on Google App Engine. 
 
 
 Of course, make sure, too, that Python is installed on your local machine.  Python 2.7 is recommended.  If you have difficulty getting your app to play nice with GAE, try using the last stable release of Python 2.5.
@@ -33,34 +33,28 @@ NOTE: the Flask docs recommend running the app in a virtual environment, even fo
 	http://flask.pocoo.org/docs/installation/#virtualenv
 
 
-Because Canteen is designed to run on GAE, and, hence, is most easily tested and developed via the GAE Launcher utility, don't worry about setting up a virtual env UNLESS you want to hammer away on it via the command line.  If you choose to develop Canteen via the command line--without using GAE's CLI tools--OR if you intend to install the app on AWS, then, yes, *please* do your dev work inside a virtual env.  (In that case, the following instructions regarding the app.yaml file required by GAE will not be of much relevance to you.)
+Because Canteen is designed to run on GAE, and, hence, is most easily developed, tested, and deployed via the GAE Launcher utility, don't worry about setting up a virtual env *unless* you want to hammer away on it via the command line.  If you choose to develop Canteen via the command line--without using GAE's command line tools--OR if you intend to install the app on AWS, then, yes, *please* do your dev work inside a virtual env.  (If you choose to use the command line and a virtual env, the following instructions regarding the *app.yaml* file required by GAE will not be of too much relevance to you.)
 
 Once you have determined your development environment...
 
-1) Pull this repo onto your development machine. (If you're reading this, you've probably already did that.)
+1) Fork this repo and pull the code down onto your development machine.
 
-2) unpack / unzip the package (You probably already did that, too.)
+2) Inside of the Canteen directory, you'll find the *src/app.yaml* file.  Edit the application name and version in the *app.yaml* file.  Presently, it's set as application: seanbradley-2 and version: 3  ...but you need to change name in the text editor of your choice so that it is the same as the name you selected inside of GAE's web-based admnistrative dashboard.  Change the version number to 1.
 
-3) Then CD into the Canteen directory and run::
-
-	python setup.py install
-
-4) Inside of the Canteen directory, you'll find the src/app.yaml file.  Edit the application name and version in the app.yaml file.  Presently, it's set as application: seanbradley-2 and version: 3  ...but you need to change name in the text editor of your choice so that it is the same as the name you selected inside of GAE's web-based admnistrative dashboard.  Change the version number to 1.
-
-5) Open up GAE's Launcher, click [File] --> [Add Existing Application] --> find the "Canteen\src" directory on your harddrive --> then, in the Launcher, click [Start].  Make any desired changes and then [Deploy].
+5) Open up GAE's Launcher, click [File] --> [Add Existing Application] --> find the "Canteen\src" directory on your harddrive --> then, in the Launcher, click [Start].  Make any desired changes, test them out in your browser, and then, inside the Launcher, clik [Deploy].
 
 
-You'll be in the trenches and behind the wire before you know it.
+You'll be in the trenches and behind the wire before you know it. :)
 
 
-NOTE: You may also have to adjust URLs in the src\templates\admin_dashboards_layout.html template.
+NOTE: You may also have to adjust URLs in the *src\templates\admin_dashboards_layout.html* template.
 
 ************************************
 
 TO RUN THE APP FROM THE COMMAND LINE
 ===+++==============================
 
-These are instructions for folks who don't want to use Google App Engine, and who know what they're doing when it comes to deploying Flask.  You will have to change the src/application/_init_.py file as well as other files listed in the comments of the src/main.py file.
+These are instructions for Flask veterans who don't want to use Google App Engine, and who know what they're doing when it comes to deployment on a foreign server.  You will have to change the *src/application/_init_.py* file as well as other files listed in the comments of the *src/main.py* file.
 
 Assuming you've tweaked the app correctly and have set up your virtual env to run the app outside of GAE, CD to the Canteen directory and enter::
 
@@ -68,37 +62,39 @@ Assuming you've tweaked the app correctly and have set up your virtual env to ru
 
 Ctrl-C to stop it.
 
-When in development mode, line 3 of the runserver.py file should be set to debug=True.  This will run the debugger in your client via the localhost address, and any template changes will be instantly apparent upon a browser refresh.  If you've also installed Compass (and run it from a Ruby command line, OR if you have effectively switched on the Compass-Flask extension (by uncommenting the appropriate line in the app.yaml fileo), then compiling changes to your .scss files and checking the resultant impact on the app's styling is a breeze.  When you're ready to run your site in production mode, change line 3 of the runserver.py file to debug=False.
+When in development mode, line 3 of the runserver.py file should be set to debug=True.  This will run the debugger in your client via the localhost address, and any template changes will be instantly apparent upon a browser refresh.  If you've also installed Compass (and run it from a Ruby command line, OR if you have effectively switched on the Compass-Flask extension (by uncommenting the appropriate line in the *app.yaml* fileo), then compiling changes to your .scss files and checking the resultant impact on the app's styling is a snap.  When you're ready to run your site in production mode, change line 3 of the runserver.py file to debug=False.
 
 
 ************************************
 
-INDEX OF IMPORTANT FILES
-========================
+A MANIFEST OF IMPORTANT FILES
+========+++++================
 
-*app.yaml* and *main.py*  are files that Google App Engine needs to run Canteen.  In app.yaml, do not use Python27 for the runtime, and do not set threadsafe=true (unless you are deploying to a non-GAE machine).  *main.py* is the primary Google App Engine (GAE) handler for the app.
+This is not a MANIFEST.in file.  It's just a list of files you should know about and where they're located in the directory tree.
 
-Are you trying to define page views?  Go to views.py.
+*app.yaml* and *main.py*  are files that Google App Engine needs to run Canteen.  In *app.yaml*, do not use Python27 for the runtime, and do not set threadsafe=true (unless you are deploying to a non-GAE machine).  *main.py* is the primary Google App Engine (GAE) handler for the app.
 
-Need to fix routing of URLS?  Go to urls.py.
+Are you trying to define page views?  Go to *views.py*.
 
-Want to enter additional info, like a date, into a form field?  Set up or adjust database entities in models.py first.
+Need to fix routing of URLS?  Go to *urls.py*.
 
-Forms which post to the database are set up in forms.py.  WTFforms--the Flask extension which makes integrating forms easier--can be found in the /packages/flaskext directory.
+Want to enter additional info, like a date, into a form field?  Set up or adjust database entities in *models.py* first.
+
+Forms which post to the database are set up in *forms.py*.  WTFforms--the Flask extension which makes integrating forms easier--can be found in the /packages/flaskext directory.
 
 One little plus for using GAE: the database can be manipulated directly via SQL queries in the GAE control panel.
 
-Did you change something for the admin side of the site and it broke?  Make sure login functions for your views jive correctly with decorators.py.
+Did you change something for the admin side of the site and it broke?  Make sure login functions for your views jive correctly with *decorators.py*.
 
 And, of course, make sure you import the necessary module to execute new code on whichever page you changed.
 
 Finally, about the app's templates (which use Jinja)...
 
-The primary template for HTML pages is base.html; however, the blog page uses blog_layout.html. And...
+The primary template for HTML pages is *base.html*; however, the blog page uses *blog_layout.html*. And...
 
-There are two admin pages: the "admin_only" page, and the "new_post" page.  Both of these pages require/extend the admin_dashboards_layout.html template.
+There are two admin pages: the *admin_only.html* page, and the *new_post.html* page.  Both of these pages require/extend the *admin_dashboards_layout.html* template.
 
-The homepage is index.html.  It's in the templates directory.
+The homepage is *index.html*.  It's in the templates directory.
 
 ***********************
 
@@ -106,7 +102,7 @@ TO DO:
 
 Fix blog posts to render HTML tags.  
 
-Enable compiling of altered .scss files in a production environment(?)
+Enable Pythonic compiling of altered .scss files in a production environment(?)
 
 
 ************************************
@@ -118,7 +114,7 @@ You can learn more about Sass at sass-lang.org.
 
 Yes, using Compass requires Ruby, but, technically, it's not a *hardcore* prerequisite to install Ruby or Compass.  Why?
 
-First and foremost, the app has the Flask-Compass extension.  It relies on a config.rb file in the /static/compass_project directory.  (Right now, for this version, I cannot guarantee that the config.rb file is totally up-to-date, but it will be soon.) Even so, if the compilation of .scss files is impossibly buggy, you may then want to consider installing Ruby and Compass for development purposes.
+First and foremost, the app has the Flask-Compass extension.  It relies on a *config.rb* file in the /static/compass_project directory.  (Right now, for this version, I cannot guarantee that the config.rb file is totally up-to-date, but it will be soon.) Even so, if the compilation of .scss files is impossibly buggy, you may then want to consider installing Ruby and Compass for development purposes.
 
 But if you're a Pythonista and feel like Ruby is a potential enemy sympathizer, Compass-style.org says...
 
@@ -164,7 +160,7 @@ The compass watch process will automatically compile any revised .scss files int
 USING PYSCSS INSTEAD OF COMPASS
 ===============================
 
-Alternatively, if you're in Python's "Special Operations", you can get around messing with Ruby (or pyRuby or rython, etc.) by compiling your .scss files on your server using *pyScss*.
+Alternatively, if you're in Python's "Special Operations", you might be able to navigate around Ruby (or pyRuby or rython, etc.) by compiling your .scss files on your server using *pyScss*.
 
 pyScss is still in development, but using it allows you to have a purely Pythonic development or production environment.  Check out the pyScss Github repo at::
 
@@ -212,5 +208,5 @@ http://f.souza.cc/2010/08/flying-with-flask-on-google-app-engine/
 Canteen borrows heavily from the work of Kamal Gill and his Flask / GAE template, which uses HTML5Boilerplate instead of Bootstrap:
 https://github.com/kamalgill/flask-appengine-template
 
-*NB: I am not an unbridled fan of GAE, but it's especially handy if your free tier at AWS has been exhausted. ;-)
+*NB: I am not an unbridled fan of GAE, but it's especially handy if your free tier at AWS has been exhausted. ;)
 
