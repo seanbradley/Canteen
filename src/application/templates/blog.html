@@ -10,24 +10,25 @@
 <body>
 
 
-	<div>
-		{% block content %}
+    <div>
+        {% block content %}
         {{ super() }}
-		<ul>
-    		{% for post in blog %}
-    		<li class="span9">
-				<h2>{{ post.title }}</h2>
-            	<h4>written by {{ post.author.nickname() }}</h4>
-				<br />
-        		<div style="font-size:14px">{{ post.prose }}</div>
-				<div style="padding:10px"></div>
-				<hr />
-				<div style="padding:15px"></div>
-    		</li>
-    		{% endfor %}
-		</ul>
-		{% endblock %}
-	</div>
+        <ul>
+            {% for post in blog %}
+            <li class="span9">
+                <h2>{{ post.title }}</h2>
+                <h4>{{ post.when }}</h4>
+                <h4>written by {{ post.author.nickname() }}</h4>
+                <br />
+                <div style="font-size:14px">{{ post.prose|safe }}</div>
+                <div style="padding:10px"></div>
+                <hr />
+                <div style="padding:15px"></div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </div>
 
 	{% block sidebarnav %}
 	{{ super() }}
@@ -45,10 +46,10 @@
               <li><a href="https://github.com/bravoflix">Github</a></li>
               <li><a href="http://blog.bravoflix.com/">BravoBlog</a></li>
             </ul>
-	{% endblock %}
+    {% endblock %}
 
     <div class="clear_both"></div>
 
-	{% block footer %}
-	{{ super() }}
-	{% endblock %}
+    {% block footer %}
+    {{ super() }}
+    {% endblock %}

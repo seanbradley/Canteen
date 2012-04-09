@@ -5,9 +5,8 @@
 {{ super() }}
 {% block title %}<title>Sean Bradley&mdash;New Post</title>{% endblock %}
 <script>
-    $(document).ready(function(){ // (s)document.ready
-        $("textarea[name='editor']").ckeditor(function(){},{height:700});
-    }); // (e)document.ready
+    <script type="text/javascript" src="/static/js/tiny_mce/tiny_mce.js">
+</script>
 </script>
 {% endblock %}
 </head>
@@ -30,7 +29,7 @@
             <br />
             <br />
 
-            <label for="title">{{ form.title.label }}</label>
+            {{ form.title.label }}
 
             {{ form.title|safe }}
 
@@ -46,11 +45,9 @@
             <br />
 
 
-            <label for="prose">{{ form.prose.label }}</label>
+            {{ form.prose.label }}
 
             {{ form.prose|safe }}
-
-
 
             {% if form.prose.errors %}
             <ul class="errors">

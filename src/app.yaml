@@ -3,7 +3,6 @@ version: 6
 runtime: python
 api_version: 1
 
-
 default_expiration: "14d"
 
 builtins:
