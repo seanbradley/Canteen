@@ -19,7 +19,7 @@ INSTALL THE APP (THE EASY WAY)
 
 These instructions assume you already have a Google App Engine account (also known as GAE)* and have installed the GAE launcher on your local machine.  It also assumes you've chosen and selected a new application name via the GAE administrative dashboard.  If not, you can get started with GAE at:
 
-	http://appengine.google.com
+    http://appengine.google.com
 
 
 NOTE: GAE will ask you to give your application a name.  That name will be synonymous with the application name inside Canteen's *app.yaml* file.  The name you choose for your version of Canteen must not be synonymous with another application already reserved on Google App Engine. 
@@ -30,7 +30,7 @@ Of course, make sure, too, that Python is installed on your local machine.  Pyth
 
 NOTE: the Flask docs recommend running the app in a virtual environment, even for a production server.  More about that here::
 
-	http://flask.pocoo.org/docs/installation/#virtualenv
+    http://flask.pocoo.org/docs/installation/#virtualenv
 
 
 Because Canteen is designed to run on GAE, and, hence, is most easily developed, tested, and deployed via the GAE Launcher utility, don't worry about setting up a virtual env *unless* you want to hammer away on it via the command line.  If you choose to develop Canteen via the command line--without using GAE's command line tools--OR if you intend to install the app on AWS, then, yes, *please* do your dev work inside a virtual env.  (If you choose to use the command line and a virtual env, the following instructions regarding the *app.yaml* file required by GAE will not be of too much relevance to you.)
@@ -58,7 +58,7 @@ These are instructions for Flask veterans who don't want to use Google App Engin
 
 Assuming you've tweaked the app correctly and have set up your virtual env to run the app outside of GAE, CD to the Canteen directory and enter::
 
-	python runserver.py
+    python runserver.py
 
 Ctrl-C to stop it.
 
@@ -108,7 +108,7 @@ Enable Pythonic compiling of altered .scss files in a production environment(?)
 ************************************
 
 A WORD ABOUT SASS AND COMPASS
-=+++++++=====================
+=============================
 
 You can learn more about Sass at sass-lang.org. 
 
@@ -118,14 +118,14 @@ First and foremost, the app has the Flask-Compass extension.  It relies on a *co
 
 But if you're a Pythonista and feel like Ruby is a potential enemy sympathizer, Compass-style.org says...
 
->>>The instructions to integrate Compass/Sass with a Python framework are:
+The instructions to integrate Compass/Sass with a Python framework are:
 
->>>1. Use Compass/Sass
->>>2. Use your Python framework [in this case, Flask]
+1) Use Compass/Sass
+2) Use your Python framework [in this case, Flask]
 
 In other words:
 
->>>"Compass and Sass are built in Ruby. When the rest of your project is also built in Ruby, it makes sense to squeeze every last ounce of convenient automatic integration, like having your project automatically compile Sass to CSS for you at runtime. But that integration is not actually necessary, and when the rest of your project is not Ruby, you pay a lot more for that little bit of convenience."
+"Compass and Sass are built in Ruby. When the rest of your project is also built in Ruby, it makes sense to squeeze every last ounce of convenient automatic integration, like having your project automatically compile Sass to CSS for you at runtime. But that integration is not actually necessary, and when the rest of your project is not Ruby, you pay a lot more for that little bit of convenience."
 
 Hence, extrapolating that advice to Canteen, I've made no attempt (yet) to fully hook in Compass during installation or to compile Sass at runtime.  I've only put them close at hand for your convenience.
 
@@ -145,11 +145,11 @@ First intall Ruby.
 
 Once Ruby is installed, you can install Compass like so::
 
-	gem install compass
-	
-	cd /path/to/Canteen/static/compass_project/
+    gem install compass
+    
+    cd /path/to/Canteen/static/compass_project/
 
-	compass watch
+    compass watch
 
 
 The compass watch process will automatically compile any revised .scss files into the .css files in the stylesheets directory whenever they change. 
@@ -164,17 +164,17 @@ Alternatively, if you're in Python's "Special Operations", you might be able to 
 
 pyScss is still in development, but using it allows you to have a purely Pythonic development or production environment.  Check out the pyScss Github repo at::
 
-	https://github.com/Kronuz/pyScss
+    https://github.com/Kronuz/pyScss
 
 
 After installing pyScss, you can compile a .scss file using::
 
-	python -mscss < file.scss
+    python -mscss < file.scss
 
 
 Afterwards, you'll need to move the compiled file into the appropriate Canteen directory--for example, like so::
 
-	mv path/to/your_file.scss /application/static/compass_project/stylesheets
+    mv path/to/your_file.scss /application/static/compass_project/stylesheets
 
 
 ************************************
