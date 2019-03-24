@@ -6,7 +6,7 @@ CANTEEN: Flask outfitted for mobile combat
 
 Canteen is a built on **Flask**--a Python-based "microframework"--coupled with .scss files compiled with Compass.  (While the Flask-Compass extension is integrated into this Python app for development use, Compass itself is stylesheet authoring environment for Sass that relies on Ruby.)
 
-In addition, the front-end of Canteen is inspired by Bootstrap, a wonderfully responsive HTML5 framework suitable for mobile web apps.  To see what that styling looks like, visit www.seanbradley.biz.  There you'll see the app served up from Google App Engine (GAE). Resizing your browser will give you a taste for how the app might display on any number of mobile devices.
+In addition, the front-end of Canteen is inspired by Bootstrap, a wonderfully responsive HTML5 framework suitable for mobile web apps.
 
 Perhaps the biggest inspiration for Canteen is Kamal Gill's version of Flask on GAE, which uses HTML5Boilerplate instead of Bootstrap, as well as Fransico Souza's code snippets for deploying Flask on GAE.  In its essence, Canteen was built from clones of, and a lot of tweaks to, those two sources of code.
 
